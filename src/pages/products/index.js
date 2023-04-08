@@ -33,10 +33,10 @@ const index = ({ data }) => {
 					<div className="contain ">
 						<div className="grid grid-cols-1 gap-10 md:grid-cols-3 xl:grid-cols-4">
 							{data.map((item, index) => (
-								<div className="w-full" key={"Products are fetching" + index}>
+								<div className="w-full" key={item.id}>
 									{/* Cards */}
 									<Link
-										href={`/`}
+										href={`/products/${item.id}`}
 										className="w-full relative overflow-hidden h-[500px] shad hover:scale-105 transition-all duration-500 cursor-pointer rounded-lg flex justify-center items-center flex-col gap-5 px-6  ">
 										<img
 											className="h-[200px] mx-auto rounded-md"

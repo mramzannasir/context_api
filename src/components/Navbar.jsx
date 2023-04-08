@@ -1,8 +1,11 @@
+import { CartContext } from "@/context/context";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import { IoCartOutline } from "react-icons/io5";
 
+
 const Navbar = () => {
+	const {cartQuantity} = useContext(CartContext)
 	return (
 		<header className="wrapper body-font shadow-lg p-5 bg-black bg-opacity-5">
 			<div className="contain  flex-col md:flex-row justify-between items-center">
@@ -17,7 +20,7 @@ const Navbar = () => {
 				<button className="relative">
 					<IoCartOutline size={34} />
 					<div className="absolute top-[-.6rem] right-[-.5rem] w-6 h-6 flex justify-center items-center rounded-full bg-red-600 text-white font-medium">
-						0
+						{cartQuantity}
 					</div>
 				</button>
 			</div>
